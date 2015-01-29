@@ -5,8 +5,8 @@
         campaign,
         report_date,
         
-        SUM(CASE user_type WHEN 'New Visitor' THEN visitor_cnt END) AS "new_visits",
-        SUM(CASE user_type WHEN 'Returning Visitor' THEN visitor_cnt END) AS "returning_visits"
+        SUM(CASE user_type WHEN 'New Visitor' THEN sessions END) AS "new_visits",
+        SUM(CASE user_type WHEN 'Returning Visitor' THEN sessions END) AS "returning_visits"
       
         from marketing.visits
         group by 1, 2

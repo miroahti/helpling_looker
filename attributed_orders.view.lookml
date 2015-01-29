@@ -13,7 +13,6 @@
             left join dwh_dl.orders o on o.reference = ba.order_id and o.dwh_country_id = ba.dwh_country_id
             left join dwh_dl.orders_booking_cost_vouchers vc on vc.fk_orders_id = o._id and o.dwh_country_id = vc.dwh_country_id
             left join dwh_mart.t_dim_countries co on co.country_id =  ba.dwh_country_id 
-            where co.country_iso <> ''
             
             group by 1,2,3
             
