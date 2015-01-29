@@ -13,6 +13,7 @@
       hardbounce_cnt,
       softbounce_cnt
       from marketing.interface_reports
+      
 
   fields:
   - measure: count
@@ -23,17 +24,19 @@
     type: number
     sql: ${TABLE}.profile_id
 
-  - dimension: profile_name
-    sql: ${TABLE}.profile_name
-
   - dimension: interface_id
     type: number
     sql: ${TABLE}.interface_id
 
   - dimension: interface_alias
     sql: ${TABLE}.interface_alias
+    
+  - dimension: profile_name
+    sql: LEFT(${TABLE}.profile_name,2)
 
   - dimension: date_sent
+    type: time
+    timeframes: [date, week, month]
     sql: ${TABLE}.date_sent
 
   - measure: emails_sent
@@ -56,6 +59,7 @@
     type: sum
     sql: ${TABLE}.softbounce_cnt
 
+  
 #Define some measures
 
   - measure: emails_sent_successfully
@@ -88,6 +92,7 @@
     type: number
     decimals: 2
     sql: ((${softbounces})*1.0  / nullif(${emails_sent},0))*100   
+    format: "%.2f%"
 
 
   sets:
