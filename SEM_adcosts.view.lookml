@@ -8,7 +8,7 @@
       ad_cost,
       ad_impressions
       FROM marketing.adcosts
-      WHERE keyword <> '(content targeting)'
+      WHERE keyword <> '(content targeting)' and keyword <> '(remarketing/content targeting)'
 
   fields:
   - measure: count
