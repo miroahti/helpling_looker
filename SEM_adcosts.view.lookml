@@ -8,7 +8,7 @@
       ad_cost,
       ad_impressions
       FROM marketing.adcosts
-      WHERE keyword_match_type <> '(not set)' and keyword <> '(content targeting)'
+      WHERE keyword <> '(content targeting)'
 
   fields:
   - measure: count
