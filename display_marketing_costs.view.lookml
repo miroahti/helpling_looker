@@ -1,4 +1,4 @@
-- view: display_image_costs
+- view: display_marketing_costs
   derived_table:
     sql: |
       SELECT

@@ -22,7 +22,7 @@
       sql_on:  ${interface_reports.interface_id}::varchar = ${attributed_orders.campaign}::varchar and  ${interface_reports.date_sent_date} = DATE(${attributed_orders.order_date})
       relationship: one_to_one
       
-- explore: display_image_costs
+- explore: display_marketing_costs
   joins:
     - join: visits_pivoted
       sql_on:  ${display_marketing_costs.campaign}::varchar = ${visits_pivoted.campaign}::varchar and ${display_marketing_costs.report_date} = ${visits_pivoted.report_date}
