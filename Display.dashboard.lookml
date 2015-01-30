@@ -16,6 +16,12 @@
       explore: crm_daily_reports
       dimension:  display_costs_google.campaign
   
+    - name: source
+      title: "Source"
+      type: suggest_filter
+      explore: crm_daily_reports
+      dimension: visits_for_display.source
+  
 
 
   elements:
@@ -103,4 +109,20 @@
         attributed_orders.new_customers, display_costs_google.CAC, attributed_orders.gmv_fwd]
       sorts: [ddisplay_costs_google.report_date]
       width: 16
+      
+    - name: temp_all_campaigns
+      title: Rough Information on All Campaigns
+      type: table
+      model: marketing
+      explore: visits_for_display
+      listen:
+        campaign: display_costs_google.campaign
+        date: display_costs_google.report_date_date
+        source: visits_for_display.source
+      dimensions: [visits_for_display.campaign, visits_for_display.source]
+      measures: [visits_for_display.total_visits, attributed_orders.orders, attributed_orders.new_customers,
+        attributed_orders.gmv_fwd]
+      sorts: [visits_for_display.campaign]
+      width: 16
+
       

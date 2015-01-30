@@ -39,3 +39,9 @@
     - join: attributed_orders_keyword
       sql_on: ${sem_adcosts.campaign}::varchar = ${attributed_orders_keyword.campaign}::varchar and ${sem_adcosts.report_date_date} = DATE(${attributed_orders_keyword.click_date}) and ${sem_adcosts.keyword} = ${attributed_orders_keyword.keyword}
       relationship: one_to_one
+      
+- explore: visits_for_display
+  joins:
+    - join: attributed_orders
+      sql_on:  ${visits_for_display.campaign}::varchar = ${attributed_orders.campaign}::varchar and ${visits_for_display.report_date_date} = DATE(${attributed_orders.click_date})
+      relationship: one_to_one 
