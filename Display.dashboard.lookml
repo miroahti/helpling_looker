@@ -19,6 +19,33 @@
 
 
   elements:
+  
+      
+    - name: visits_chart
+      title: Visits Chart
+      type: looker_line
+      model: marketing
+      listen:
+        campaign: display_costs_google.campaign
+        date: display_costs_google.report_date_date
+      explore: display_costs_google
+      dimensions: [display_costs_google.report_date_date]
+      measures: [visits_pivoted.total_visits]
+      sorts: [display_costs_google.report_date]
+      show_null_points: true
+      stacking: ''
+      show_value_labels: false
+      x_axis_gridlines: false
+      y_axis_gridlines: true
+      show_view_names: true
+      show_y_axis_labels: true
+      show_y_axis_ticks: true
+      show_x_axis_label: true
+      show_x_axis_ticks: true
+      x_axis_scale: auto
+      point_style: none
+      interpolation: linear
+  
 
     - name: display_campaigns
       title: Display Campaigns
@@ -50,28 +77,3 @@
       sorts: [ddisplay_costs_google.report_date]
       width: 16
       
-      
-    - name: visits_chart
-      title: Visits Chart
-      type: looker_line
-      model: marketing
-      listen:
-        campaign: display_costs_google.campaign
-        date: display_costs_google.report_date_date
-      explore: display_costs_google
-      dimensions: [display_costs_google.report_date_date]
-      measures: [visits_pivoted.total_visits]
-      sorts: [display_costs_google.report_date]
-      show_null_points: true
-      stacking: ''
-      show_value_labels: false
-      x_axis_gridlines: false
-      y_axis_gridlines: true
-      show_view_names: true
-      show_y_axis_labels: true
-      show_y_axis_ticks: true
-      show_x_axis_label: true
-      show_x_axis_ticks: true
-      x_axis_scale: auto
-      point_style: none
-      interpolation: linear
