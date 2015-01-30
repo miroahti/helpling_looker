@@ -234,10 +234,6 @@
     decimals: 2
     sql:  ${total_costs}*1.0 / nullif(${attributed_orders.new_customers},0)
     
-  - measure: cost_to_gmv
-    type: number
-    decimals: 2
-    sql:  ${total_costs}*1.0 / nullif(${attributed_orders.gmv_fwd},0)
 
 #Unnecessary fields    
     

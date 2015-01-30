@@ -40,7 +40,7 @@
     type: sum
     sql: ${TABLE}.new_customers
     
-  - dimension: order_date
+  - dimension: click_date
     sql: ${TABLE}.click_date  
 
   sets:

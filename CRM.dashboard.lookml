@@ -30,8 +30,6 @@
       explore: crm_daily_reports
       dimensions: [crm_daily_reports.date_sent_date]
       measures: [crm_daily_reports.UCTR]
-      filters:
-        crm_daily_reports.date_sent_date: 30 days ago for 30 days
       listen:
         date: crm_daily_reports.date_sent_date
         country: crm_daily_reports.profile_name
@@ -58,8 +56,6 @@
       explore: crm_daily_reports
       dimensions: [crm_daily_reports.date_sent_date]
       measures: [attributed_orders.orders]
-      filters:
-        crm_daily_reports.date_sent_date: 30 days ago for 30 days
       listen:
         date: crm_daily_reports.date_sent_date  
         country: crm_daily_reports.profile_name
@@ -86,8 +82,6 @@
       model: marketing
       explore: crm_daily_reports
       width: 14
-      filters:
-        crm_daily_reports.date_sent_date: 30 days ago for 30 days
       listen:
         date: crm_daily_reports.date_sent_date 
         country: crm_daily_reports.profile_name
@@ -105,8 +99,6 @@
       model: marketing
       explore: crm_daily_reports
       width: 14
-      filters:
-        crm_daily_reports.date_sent_date: 30 days ago for 30 days
       listen:
         date: crm_daily_reports.date_sent_date 
         country: crm_daily_reports.profile_name

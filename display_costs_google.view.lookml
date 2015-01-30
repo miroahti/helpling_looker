@@ -41,7 +41,8 @@
   - measure: CTR
     type: number
     decimals: 2
-    sql: (${visits_pivoted.total_visits} /  nullif(${impressions},0))*100 
+    sql: (${visits_pivoted.total_visits}*1.0  /  nullif(${impressions},0))*100 
+    format: "%.f%"  
 
 
   - measure: CPV
@@ -53,16 +54,17 @@
     type: number
     decimals: 2
     sql:  ${total_costs}*1.0 / nullif(${attributed_orders.orders},0)
+    
+  - measure: CVR
+    type: number
+    sql: (${attributed_orders.orders}*1.0  / nullif(${visits_pivoted.total_visits},0))*100 
+    format: "%.f%"  
   
   - measure: CAC
     type: number
     decimals: 2
     sql:  ${total_costs}*1.0 / nullif(${attributed_orders.new_customers},0)
     
-  - measure: cost_to_gmv
-    type: number
-    decimals: 2
-    sql:  ${total_costs}*1.0 / nullif(${attributed_orders.gmv_fwd},0)
 
   sets:
     detail:

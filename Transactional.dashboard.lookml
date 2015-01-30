@@ -31,8 +31,6 @@
       explore: interface_reports
       dimensions: [interface_reports.date_sent_date]
       measures: [interface_reports.UCTR]
-      filters:
-        interface_reports.date_sent_date: 30 days ago for 30 days
       listen: 
         date: interface_reports.date_sent
         country: interface_reports.profile_name
@@ -59,8 +57,6 @@
       explore: interface_reports
       dimensions: [interface_reports.date_sent_date]
       measures: [attributed_orders.orders]
-      filters:
-        interface_reports.date_sent_date: 30 days ago for 30 days
       listen: 
         date: interface_reports.date_sent
         country: interface_reports.profile_name
@@ -90,8 +86,6 @@
         interface_reports.UCTOR, interface_reports.SB_Rate, interface_reports.HB_Rate,
         visits_pivoted.total_visits, attributed_orders.orders, attributed_orders.new_customers,
         attributed_orders.gmv_fwd]
-      filters:
-        interface_reports.date_sent_date: 30 days ago for 30 days
       listen: 
         date: interface_reports.date_sent
         country: interface_reports.profile_name
@@ -109,8 +103,6 @@
         interface_reports.UCTOR, interface_reports.SB_Rate, interface_reports.HB_Rate,
         visits_pivoted.total_visits, attributed_orders.orders, attributed_orders.new_customers,
         attributed_orders.gmv_fwd]
-      filters:
-        interface_reports.date_sent_date: 30 days ago for 30 days
       listen: 
         date: interface_reports.date_sent
         country: interface_reports.profile_name

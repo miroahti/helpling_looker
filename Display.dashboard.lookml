@@ -22,7 +22,7 @@
   
       
     - name: visits_chart
-      title: Visits Chart
+      title: Visits
       type: looker_line
       model: marketing
       listen:
@@ -45,6 +45,33 @@
       x_axis_scale: auto
       point_style: none
       interpolation: linear
+      
+    - name: display_orders
+      title: Orders
+      type: looker_line
+      model: marketing
+      explore: display_costs_google
+      dimensions: [display_costs_google.report_date_date]
+      measures: [attributed_orders.orders]
+      listen:
+        campaign: display_costs_google.campaign
+        date: display_costs_google.report_date_date
+      sorts: [display_costs_google.report_date, display_costs_google.report_date_date desc]
+      limit: 500
+      show_null_points: true
+      stacking: ''
+      show_value_labels: false
+      x_axis_gridlines: false
+      y_axis_gridlines: true
+      show_view_names: true
+      show_y_axis_labels: true
+      show_y_axis_ticks: true
+      show_x_axis_label: true
+      show_x_axis_ticks: true
+      x_axis_scale: auto
+      point_style: none
+      interpolation: linear
+  
   
 
     - name: display_campaigns
@@ -56,8 +83,8 @@
         date: display_costs_google.report_date_date
       explore: display_costs_google
       dimensions: [display_costs_google.campaign]
-      measures: [display_costs_google.impressions, visits_pivoted.total_visits, display_costs_google.ad_costs,
-        display_costs_google.CPV, attributed_orders.orders, display_costs_google.CPO,
+      measures: [display_costs_google.impressions, visits_pivoted.total_visits, display_costs_google.CTR, display_costs_google.ad_costs,
+        display_costs_google.CPV, attributed_orders.orders, display_costs_google.CPO, display_costs_google.CVR,
         attributed_orders.new_customers, display_costs_google.CAC, attributed_orders.gmv_fwd]
       sorts: [display_costs_google.campaign]
       width: 16
@@ -71,8 +98,8 @@
         date: display_costs_google.report_date_date
       explore: display_costs_google
       dimensions: [display_costs_google.report_date_date]
-      measures: [display_costs_google.impressions, visits_pivoted.total_visits, display_costs_google.ad_costs,
-        display_costs_google.CPV, attributed_orders.orders, display_costs_google.CPO,
+      measures: [display_costs_google.impressions, visits_pivoted.total_visits, display_costs_google.CTR, display_costs_google.ad_costs,
+        display_costs_google.CPV, attributed_orders.orders, display_costs_google.CPO, display_costs_google.CVR,
         attributed_orders.new_customers, display_costs_google.CAC, attributed_orders.gmv_fwd]
       sorts: [ddisplay_costs_google.report_date]
       width: 16
