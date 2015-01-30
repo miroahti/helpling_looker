@@ -32,7 +32,7 @@
       dimensions: [interface_reports.date_sent_date]
       measures: [interface_reports.UCTR]
       listen: 
-        date: interface_reports.date_sent
+        date: interface_reports.date_sent_date
         country: interface_reports.profile_name
         alias: interface_reports.interface_alias
       sorts: [interface_reports.date_sent_date desc]
@@ -58,7 +58,7 @@
       dimensions: [interface_reports.date_sent_date]
       measures: [attributed_orders.orders]
       listen: 
-        date: interface_reports.date_sent
+        date: interface_reports.date_sent_date
         country: interface_reports.profile_name
         alias: interface_reports.interface_alias  
       sorts: [interface_reports.date_sent_date desc]
@@ -87,7 +87,7 @@
         visits_pivoted.total_visits, attributed_orders.orders, attributed_orders.new_customers,
         attributed_orders.gmv_fwd]
       listen: 
-        date: interface_reports.date_sent
+        date: interface_reports.date_sent_date
         country: interface_reports.profile_name
         alias: interface_reports.interface_alias  
       sorts: [interface_reports.profile_name]
@@ -106,6 +106,6 @@
       listen: 
         date: interface_reports.date_sent
         country: interface_reports.profile_name
-        alias: interface_reports.interface_alias  
+        alias: interface_reports.interface_alias_date  
       sorts: [interface_reports.date_sent_date desc]
       width: 14      
