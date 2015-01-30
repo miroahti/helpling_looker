@@ -92,6 +92,7 @@
         alias: interface_reports.interface_alias  
       sorts: [interface_reports.profile_name]
       width: 14
+      total: true
       
     - name: transactional_daily_overview
       title: Transactional Daily Overview
@@ -108,4 +109,5 @@
         country: interface_reports.profile_name
         alias: interface_reports.interface_alias_date  
       sorts: [interface_reports.date_sent_date desc]
-      width: 14      
+      width: 14   
+      total: true

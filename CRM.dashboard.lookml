@@ -92,6 +92,7 @@
         crm_daily_reports.Unsubscribed_Rate, crm_daily_reports.generic_costs, visits_pivoted.total_visits,
         attributed_orders.orders, crm_daily_reports.CVR, attributed_orders.new_customers, attributed_orders.gmv_fwd]
       sorts: [crm_daily_reports.profile_name]
+      total: true
   
     - name: crm_daily_overview
       title: CRM Daily Overview
@@ -108,4 +109,5 @@
         crm_daily_reports.UCTOR, crm_daily_reports.SB_Rate, crm_daily_reports.HB_Rate,
         crm_daily_reports.Unsubscribed_Rate, crm_daily_reports.generic_costs, visits_pivoted.total_visits,
         attributed_orders.orders, crm_daily_reports.CVR, attributed_orders.new_customers, attributed_orders.gmv_fwd]
-      sorts: [crm_daily_reports.profile_name]  
+      sorts: [crm_daily_reports.profile_name]
+      total: true

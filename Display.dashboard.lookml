@@ -94,6 +94,7 @@
         attributed_orders.new_customers, display_costs_google.CAC, attributed_orders.gmv_fwd]
       sorts: [display_costs_google.campaign]
       width: 16
+      total: true
     
     - name: display_daily_overview
       title: Display Overview
@@ -109,6 +110,7 @@
         attributed_orders.new_customers, display_costs_google.CAC, attributed_orders.gmv_fwd]
       sorts: [ddisplay_costs_google.report_date]
       width: 16
+      total: true
       
     - name: temp_all_campaigns
       title: Rough Information on All Campaigns
@@ -124,5 +126,6 @@
         attributed_orders.gmv_fwd]
       sorts: [visits_for_display.campaign]
       width: 16
+      total: true
 
       
