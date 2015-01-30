@@ -94,6 +94,10 @@
     sql: ((${softbounces})*1.0  / nullif(${emails_sent},0))*100   
     format: "%.2f%"
 
+  - measure: CVR
+    type: number
+    sql: (${attributed_orders.orders}*1.0  / nullif(${visits_pivoted.total_visits},0))*100 
+    format: "%.f%"  
 
   sets:
     detail:

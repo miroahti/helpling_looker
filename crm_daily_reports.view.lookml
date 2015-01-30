@@ -234,6 +234,11 @@
     decimals: 2
     sql:  ${total_costs}*1.0 / nullif(${attributed_orders.new_customers},0)
     
+  - measure: CVR
+    type: number
+    sql: (${attributed_orders.orders}*1.0  / nullif(${visits_pivoted.total_visits},0))*100 
+    format: "%.f%"      
+    
 
 #Unnecessary fields    
     

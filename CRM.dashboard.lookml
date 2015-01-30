@@ -90,7 +90,7 @@
       measures: [crm_daily_reports.emails_sent, crm_daily_reports.open_rate, crm_daily_reports.UCTR,
         crm_daily_reports.UCTOR, crm_daily_reports.SB_Rate, crm_daily_reports.HB_Rate,
         crm_daily_reports.Unsubscribed_Rate, crm_daily_reports.generic_costs, visits_pivoted.total_visits,
-        attributed_orders.orders, attributed_orders.new_customers, attributed_orders.gmv_fwd]
+        attributed_orders.orders, crm_daily_reports.CVR, attributed_orders.new_customers, attributed_orders.gmv_fwd]
       sorts: [crm_daily_reports.profile_name]
   
     - name: crm_daily_overview
@@ -107,5 +107,5 @@
       measures: [crm_daily_reports.emails_sent, crm_daily_reports.open_rate, crm_daily_reports.UCTR,
         crm_daily_reports.UCTOR, crm_daily_reports.SB_Rate, crm_daily_reports.HB_Rate,
         crm_daily_reports.Unsubscribed_Rate, crm_daily_reports.generic_costs, visits_pivoted.total_visits,
-        attributed_orders.orders, attributed_orders.new_customers, attributed_orders.gmv_fwd]
+        attributed_orders.orders, crm_daily_reports.CVR, attributed_orders.new_customers, attributed_orders.gmv_fwd]
       sorts: [crm_daily_reports.profile_name]  
